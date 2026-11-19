@@ -1,0 +1,34 @@
+[
+ {
+  "file": "1-checklist.jpg",
+  "path": "/?earned=2,3,8,15,21,44,46&open=17",
+  "viewport": {
+   "height": 800,
+   "width": 1280
+  }
+ },
+ {
+  "file": "2-roadmap.jpg",
+  "path": "/?view=roadmap&earned=2,3,4,8,15,21,44,46",
+  "viewport": {
+   "height": 800,
+   "width": 1280
+  }
+ },
+ {
+  "file": "3-spoiler.jpg",
+  "path": "/?spoiler=1&earned=2,3",
+  "viewport": {
+   "height": 800,
+   "width": 1280
+  }
+ },
+ {
+  "file": "4-missable.jpg",
+  "path": "/?kind=missable&open=39",
+  "viewport": {
+   "height": 800,
+   "width": 1280
+  }
+ }
+]
