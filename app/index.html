@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">The offline guide and tracker for every GTA VI trophy — official names, descriptions and grades, an original guide with named sources for each one, a roadmap to the platinum, and a checklist that remembers your progress.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-big"><span id="earnedCount">0</span><span class="progress-of"> / 55 earned</span></p>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-detail" id="progressDetail">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-next" id="progressNext">Next up: finish the story, Chapter 1.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" id="tabChecklist" class="tab active">Checklist</button>
+  <button type="button" id="tabRoadmap" class="tab">Roadmap to Platinum</button>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <label class="tool">Search
+    <input id="search" type="search" placeholder="Name, mission, place… e.g. WAiNK" autocomplete="off">
+  </label>
+  <label class="tool">Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="platinum">Platinum</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label class="tool">Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="tool check"><input id="spoilerToggle" type="checkbox"> Spoiler-safe: hide story names until earned</label>
+  <div class="tool buttons">
+    <button type="button" id="exportBtn">Export progress</button>
+    <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    <button type="button" id="resetBtn" title="Clear all earned ticks">Reset</button>
+  </div>
+</section>
+
+<main>
+  <section id="checklistView" aria-label="Trophy checklist">
+    <p class="view-note" id="listNote"></p>
+    <div class="layout">
+      <ol class="trophy-list" id="trophyList"></ol>
+      <aside class="detail" id="detailPanel" aria-label="Trophy guide">
+        <p class="detail-empty">Pick a trophy to read its guide and sources.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="roadmapView" hidden aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">Built only from the official descriptions: four story chapters, the named missions, the stranger strands, and the collectible counts. Play the stages in order — the story first, then strangers, then collectibles, then the long activity grinds, and finally the money and mayhem cleanup before 100% completion.</p>
+    <div class="stages" id="stages"></div>
+    <h3>Missable watchlist — do these the moment their setup appears</h3>
+    <p class="roadmap-intro">A trophy is flagged missable here only when its official description ties it to a single moment, a single place, or a choice that locks in. Story trophies are <em>not</em> flagged: they pop when you finish the mission, so finishing the story earns them. GTA VI is unreleased, so no flag here claims a verified in-game lockout — treat flagged trophies as “do it when the moment comes”.</p>
+    <ul class="watchlist" id="watchlist"></ul>
+    <h3>Counts to remember</h3>
+    <p class="counts" id="countsLine"></p>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Sources.</strong> Trophy names, descriptions and grades are the official PlayStation 5 list as published by <a href="https://www.rockstargames.com/VI">Rockstar Games — Grand Theft Auto VI</a> and as listed by PSNProfiles and Exophase, who agree on all 55 names, descriptions and grades. Every guide on this page is written in original words for this guide and names its sources beside it; no guide text is copied from another guide. There are no online trophies in the list — all 55 are earned in single-player. 28 of the 55 are hidden on PlayStation until earned.</p>
+  <p><strong>Offline.</strong> This guide is plain files under <code>app/</code>. It loads nothing from the network; progress is saved in your browser (localStorage) and can be exported to a file and imported back.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
